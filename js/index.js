@@ -2,7 +2,7 @@
 * @Author: 李亲亲ლ(°◕‵ƹ′◕ლ)
 * @Date:   2017-12-29 06:05:40
 * @Last Modified by:   李亲亲ლ(°◕‵ƹ′◕ლ)
-* @Last Modified time: 2017-12-29 08:29:45
+* @Last Modified time: 2018-01-03 06:26:50
 */
 {
 	var banners=document.querySelectorAll(".img-box li");
@@ -79,4 +79,83 @@
     	})
 
     })
+}
+
+{
+    var topBar=document.querySelector(".topbar");
+    var leftBar=document.querySelector(".cedaohang");
+    var btns=document.querySelectorAll(".cdh-ul li");
+	var floors=document.querySelectorAll("#nihao");
+    var flag=true;
+    onscroll=function(){
+        if(flag){
+        var st=document.documentElement.scrollTop;
+        if(st>1100){
+            topBar.style.display="block";
+        }else{
+            topBar.style.display="none";
+        }
+        if(st>2200){
+            leftBar.style.display="block";
+        }else{
+            leftBar.style.display="none";
+        }
+        floors.forEach(function(ele,index){
+            if(st>=ele.offsetTop){
+                for(var i=0;i<btns.length;i++){
+                    btns[i].classList.remove("active");
+                }
+                btns[index].classList.add("active");
+
+
+            }
+
+        });
+        }
+    }
+
+    //返回顶部
+    var toTop=document.querySelector(".totop");
+    console.log(toTop);
+    toTop.onclick=function(){
+        var st=document.documentElement.scrollTop;
+        var speed=st*30/500;
+        var t=setInterval(function () {
+            st-=speed;
+            if(st<=0){
+                st=0;
+                clearInterval(t);
+            }
+            document.documentElement.scrollTop=st;
+        },30)
+    }
+
+
+//楼层跳转
+
+    var btns=document.querySelectorAll(".cdh-ul li");
+    var floors=document.querySelectorAll("#nihao");
+    btns.forEach(function(ele,index){
+        ele.onclick=function(){
+            flag=false;
+            var ot=floors[index].offsetTop;
+            var now=document.documentElement.scrollTop;
+            var speed=(ot-now)*30/300;
+            var time=0;
+            var t=setInterval(function(){
+                now+=speed;
+                time+=30;
+                if(time==300){
+                    clearInterval(t);
+                    now=ot;
+                    flag=true;
+                }
+                document.documentElement.scrollTop=now;
+            },30)
+        }
+
+    })
+
+    
+    
 }
