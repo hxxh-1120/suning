@@ -8,12 +8,12 @@
 @import url('base-sn.css');
 
 @font-face {
-  font-family: 'iconfont';  /* project id 495140 */
-  src: url('https://at.alicdn.com/t/font_495140_mx8khxj06pp0hpvi.eot');
-  src: url('https://at.alicdn.com/t/font_495140_mx8khxj06pp0hpvi.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_495140_mx8khxj06pp0hpvi.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_495140_mx8khxj06pp0hpvi.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_495140_mx8khxj06pp0hpvi.svg#iconfont') format('svg');
+	font-family: 'iconfont';  /* project id 495140 */
+	src: url('https://at.alicdn.com/t/font_495140_c2lbhutbiq30izfr.eot');
+	src: url('https://at.alicdn.com/t/font_495140_c2lbhutbiq30izfr.eot?#iefix') format('embedded-opentype'),
+	url('https://at.alicdn.com/t/font_495140_c2lbhutbiq30izfr.woff') format('woff'),
+	url('https://at.alicdn.com/t/font_495140_c2lbhutbiq30izfr.ttf') format('truetype'),
+	url('https://at.alicdn.com/t/font_495140_c2lbhutbiq30izfr.svg#iconfont') format('svg');
 }
 body{
 	position: relative;
@@ -419,12 +419,16 @@ aside{
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	z-index: 2;
+	z-index: 9999999999999;
+
 }
 .aside- li{
 	width: 190px;
-	height: 32px;
+	height: 30px;
 	background: #252221;
+	border-bottom: 1px solid #252221;
+	border-top: 1px solid #252221;
+	border-left: 1px solid #252221;
 }
 .three{
 	color: #ff6700;
@@ -444,7 +448,9 @@ aside{
 }
 .aside- li:hover {
 	background:#fff;
-	border-top: 1px solid #252221 ;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
 }
 .aside- li:hover a{
 	color: #ff6700;
@@ -2251,4 +2257,285 @@ footer{
 .banner:hover .ban-right{
 	opacity: 1;
 }
+.sn-right{
+	position:fixed;
+	top:0;
+	right:0;
+	z-index: 10000090;
+	width:95px;
+	height:100%;
+}
+.sn-right-bg{
+	position:absolute;
+	right:0;
+	top:0;
+	z-index: 4;
+	width: 35px;
+	height:100%;
+	background:#383838;
+}
+.sn-grzx{
+	width:35px;
+	height:30px;
+	position: absolute;
+	top:180px;
+	left:0;
+	cursor: pointer;
+}
+.sn-grzx i{
+	font-family: iconfont;
+	color:#f90;
+	display:block;
+	text-align: center;
+	line-height:30px;
+}
+.sn-grzx:hover i{
+	background:#f90;
+	color:#fff;
+}
+.sn-shop{
+	width:35px;
+	height:115px;
+	position: absolute;
+	top:220px;
+	right:0;
+	border-bottom: 1px solid #4D4D4D;
+	border-top: 1px solid #4D4D4D;
+	cursor: pointer;
 
+}
+.sn-shop i{
+	font-family: iconfont;
+	color:#fff;
+	display:block;
+	text-align: center;
+	margin-top:10px;
+	font-size:14px;
+}
+.sn-shop:hover{
+	background:#f90;
+	color:#fff;
+}
+.sn-shop a{
+	color:#fff;
+	display:block;
+	text-align: center;
+	font-size:12px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.sn-square{
+	width:23px;
+	height:15px;
+	background:#DD0000;
+	margin:0 auto;
+	text-align: center;
+	color:#fff;
+	font-size:12px;
+	border-radius:5px;
+}
+.sn-list{
+	width:95px;
+	height:330px;
+	position:absolute;
+	top:340px;
+	right:0;
+}
+.sn-list-top{
+	width:95px;
+	height:150px;
+	cursor:pointer;
+	position: relative;
+
+}
+.sn-list-top ul{
+	width:100%;
+	height:100%;
+}
+.sn-list-top ul li{
+	width:100%;
+	height:37px;
+}
+
+.sn-list-top ul li i{
+	font-family: iconfont;
+	color:#f90;
+	display:block;
+	text-align: center;
+	line-height:37px;
+	width: 35px;
+	height:100%;
+	float: right;
+}
+.sn-list-top ul li:hover i{
+	background:#f90;
+	color:#fff;
+}
+.sn-list-bot{
+	width: 95px;
+	height:150px;
+	margin-top:30px;
+	cursor:pointer;
+}
+.sn-list-bot ul{
+	width:100%;
+	height:100%;
+}
+.sn-list-bot ul li{
+	width:100%;
+	height:37px;
+}
+
+.sn-list-bot ul li i{
+	font-family: iconfont;
+	color:#f90;
+	display:block;
+	text-align: center;
+	line-height:37px;
+	width: 35px;
+	height:100%;
+	float: right;
+
+}
+.sn-list-bot ul li:hover i{
+	background:#f90;
+	color:#fff;
+}
+.wz2{
+    display: none;
+	width:60px;
+	height:37px;
+	background:#383838;
+	text-align: center;
+	color: #ff9900;
+	font-size: 12px;
+	line-height: 37px;
+}
+.asd-neirong{
+	position: absolute;
+	top:0;
+	left:190px;
+	min-height: 450px;
+	width: 1000px;
+	overflow: hidden;
+	background: #fff;
+	z-index: 7676;
+	border:1px solid #000;
+	display: none;
+}
+
+.asd-neirong .sort-btn {
+	float: left;
+	width: 686px;
+	height: 24px;
+	margin: 10px 0 0 8px;
+	overflow: hidden;
+}
+.asd-neirong .sort-btn a {
+	float: left;
+	height: 24px;
+	margin-left: 25px;
+	padding: 0 10px;
+	color: #FFF;
+	line-height: 24px;
+	text-align: center;
+	background: #F90;
+	text-decoration: none;
+	font-family: "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+}
+.asd-neirong .sort-btn a:hover {
+	background: #F80;
+}
+.asd-neirong dd a:hover {
+	color: #f60;
+}
+.asd-neirong .cate-list {
+	width: 780px;
+	margin: 10px 0 0 0;
+	padding-left: 20px;
+	overflow: hidden;
+	float: left;
+}
+.asd-neirong dl {
+	float: left;
+	height: auto;
+	margin-bottom: 8px;
+	overflow: hidden;
+	width: 750px;
+}
+.asd-neirong dt {
+	float: left;
+	width: 84px;
+	height: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+.asd-neirong dt a {
+	display: block;
+	width: 84px;
+	height: 20px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.asd-neirong dd {
+	float: left;
+	width: 650px;
+	font: 12px/1.5 arial,tahoma,\5b8b\4f53;
+	line-height: 20px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	margin-top: 4px;
+	padding-bottom: 8px;
+}
+.asd-neirong dd a {
+	color: #666;
+	margin-right: 15px;
+	display: inline-block;
+	/*font-family: "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";*/
+	text-decoration: none;
+}
+.asd-neirong dd a.orange {
+	color: #f60;
+}
+.actShow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 199px;
+	height: 100%;
+	overflow: hidden;
+	background: #f3f3f3;
+}
+.actShow .brandList {
+	width: 182px;
+	margin: 10px 0 0 8px;
+}
+.actShow .brandList a {
+	float: left;
+	width: 90px;
+	height: 38px;
+	margin: 0 1px 1px 0;
+	padding-top: 7px;
+	background: #FFF;
+}
+.actShow .brandList img {
+	width: 80px;
+	height: 30px;
+	margin: 0 auto;
+}
+.lazy-loading, img.err-product {
+	background: url(../img/blankbg.gif) 50% 50% no-repeat;
+}
+.actShow .actList {
+	width: 180px;
+	margin: 11px 0 0 8px;
+}
+.actShow .actList img {
+	float: left;
+	width: 180px;
+	height: 100px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}

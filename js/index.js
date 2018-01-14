@@ -159,3 +159,55 @@
     
     
 }
+
+//右导航
+{
+    let logo=document.querySelectorAll(".sn-list-top ul li");
+    let logo2=document.querySelectorAll(".sn-list-bot ul li");
+    let wz=document.querySelectorAll(".wz2");
+    console.log(logo)
+    console.log(logo2)
+    console.log(wz)
+
+    logo.forEach(function(ele,index){
+        ele.onmouseover=function () {
+            wz[index].style.display="block";
+            wz[index].style.background="#f90";
+            wz[index].style.color="#fff";
+        }
+        ele.onmouseout=function () {
+            wz[index].style.display="none";
+        }
+
+    })
+    logo2.forEach(function(ele,index){
+        ele.onmouseover=function () {
+            wz[index+4].style.display="block";
+            wz[index+4].style.background="#f90";
+            wz[index+4].style.color="#fff";
+        }
+        ele.onmouseout=function () {
+            wz[index+4].style.display="none";
+        }
+
+    })
+
+
+}
+//测导航内容
+{
+    let ce=document.querySelectorAll(".aside- li");
+    let neirong=document.querySelectorAll(".asd-neirong");
+    ce.forEach(function(ele,index){
+        ele.onmouseover=function(){
+            neirong[index].style.display="block";
+        }
+        ele.onmouseout=function(){
+            neirong[index].style.display="none";
+        }
+    })
+    neirong.onmouseover=function(){
+        this.style.display="block";
+    }
+
+}
